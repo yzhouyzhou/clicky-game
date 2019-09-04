@@ -1,0 +1,10 @@
+.Header {
+  background: rgb(43, 7, 88);
+  color: wheat;
+  height: 135px;
+  max-width: 1020px;
+  width: 100%;
+  margin: 0;
+  padding: 3rem;
+  position: fixed;
+}
