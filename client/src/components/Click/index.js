@@ -12,12 +12,13 @@ class Click extends Component {
     friends,
     score: 0,
     topScore: 0,
+    isError: false,
     clickStatus: "Click an image to begin!"
   };
 
   shuffle() {
     let newFriends = [];
-    this.state.friends.forEach( friend => newFriends.push(friend));
+    this.state.friends.forEach(friend => newFriends.push(friend));
     for (let i = newFriends.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       let temp = newFriends[i];
@@ -32,7 +33,14 @@ class Click extends Component {
     if (clickedImg.isClicked) {
       this.setState({ score: 0 });
       this.setState({ clickStatus: "You guessed incorrectly!" });
-      friends.forEach(friend => (friend.isClicked = false));
+      this.setState({ isError: true });
+      // remove the class after the animation completes
+      setTimeout(() => {
+        this.setState({ isError: false });
+      }, 300);
+      friends.forEach(friend => (
+        friend.isClicked = false
+      ));
     } else {
       clickedImg.isClicked = true;
       let newScore = this.state.score + 1;
@@ -52,18 +60,18 @@ class Click extends Component {
           status={this.state}
         />
         <Title />
-        <div className="card-board">
-        {this.state.friends.map(friend => {
-          return (
-            <FriendCard
-              key={friend.id}
-              id={friend.id}
-              image={friend.image}
-              isClicked={false}
-              clickHandler={this.clickHandler}
-            />
-          );
-        })}
+        <div className={`${this.state.isError ? "card-board error" : "card-board"}`}>
+          {this.state.friends.map(friend => {
+            return (
+              <FriendCard
+                key={friend.id}
+                id={friend.id}
+                image={friend.image}
+                isClicked={false}
+                clickHandler={this.clickHandler}
+              />
+            );
+          })}
         </div>
         <Footer />
       </Wrapper>

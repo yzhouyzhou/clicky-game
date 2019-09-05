@@ -8,7 +8,7 @@ function Footer(props) {
             <div className="container">
                 <div className="text-center text-white mt-1">
                     <img className="logo" alt="logo" src="logo192.png"></img>
-                    <h10> CopyWrite</h10>
+                    <span> CopyWrite</span>
                 </div>
             </div>
         </footer>
