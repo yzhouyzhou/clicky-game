@@ -19,12 +19,7 @@ class Click extends Component {
   shuffle() {
     let newFriends = [];
     this.state.friends.forEach(friend => newFriends.push(friend));
-    for (let i = newFriends.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      let temp = newFriends[i];
-      newFriends[i] = newFriends[j];
-      newFriends[j] = temp;
-    }
+    newFriends.sort(() => Math.random() - 0.5);
     return newFriends;
   }
 
