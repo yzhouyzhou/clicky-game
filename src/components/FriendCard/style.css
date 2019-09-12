@@ -25,9 +25,16 @@
   border: 5px solid darkslategrey;
 }
 
+@media screen and (max-width: 850px) { 
+  .card {
+    height: 108px;
+    width: 98px;
+  }
+}
+
 @media screen and (max-width: 575px) { 
   .card {
-    height: 55px;
+    height: 58px;
     width: 48px;
   }
 }
