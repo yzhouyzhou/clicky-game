@@ -25,7 +25,7 @@
   border: 5px solid darkslategrey;
 }
 
-@media screen and (max-width: 950px) { 
+@media screen and (max-width: 980px) { 
   .card {
     height: 108px;
     width: 98px;
