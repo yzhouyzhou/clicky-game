@@ -24,3 +24,10 @@
   box-shadow: 2px 0 8px 5px rgba(0, 23, 31, 0.5);  
   border: 5px solid darkslategrey;
 }
+
+@media screen and (max-width: 575px) { 
+  .card {
+    height: 35px;
+    width: 35px;
+  }
+}

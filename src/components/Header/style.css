@@ -8,3 +8,9 @@
   padding: 3rem;
   position: fixed;
 }
+
+@media screen and (max-width: 575px) {
+  h2, h4 {
+    font-size: 20px;
+  }
+}
