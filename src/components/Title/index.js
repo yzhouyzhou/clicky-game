@@ -14,6 +14,7 @@ function Title(props) {
       <div className="jumbotron text-center" style={ backgroundStyle }>
         <h2>Clicky Game!</h2>
         <h4>Click on an image to earn points, but don't click on any more than once!</h4>
+        <h4>You win when the TopScore is 12</h4>
       </div>
     </div>
   );
