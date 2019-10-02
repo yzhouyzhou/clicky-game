@@ -55,7 +55,7 @@ class Click extends Component {
           status={this.state}
         />
         <Title />
-        <div className="container">
+        <div className="container card-box">
           <div className={`${this.state.isError ? "card-board error" : "card-board"}`}>
             {this.state.friends.map(friend => {
               return (

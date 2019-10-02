@@ -1,3 +1,9 @@
+.card-box {
+  min-height: 420px;
+  max-width: 1020px;
+  /* border: 3px solid gray; */
+}
+
 .card-board {
     min-height: 420px;
     margin-bottom: 50px;
