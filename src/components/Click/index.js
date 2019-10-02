@@ -55,18 +55,20 @@ class Click extends Component {
           status={this.state}
         />
         <Title />
-        <div className={`${this.state.isError ? "card-board error" : "card-board"}`}>
-          {this.state.friends.map(friend => {
-            return (
-              <FriendCard
-                key={friend.id}
-                id={friend.id}
-                image={friend.image}
-                isClicked={false}
-                clickHandler={this.clickHandler}
-              />
-            );
-          })}
+        <div className="container">
+          <div className={`${this.state.isError ? "card-board error" : "card-board"}`}>
+            {this.state.friends.map(friend => {
+              return (
+                <FriendCard
+                  key={friend.id}
+                  id={friend.id}
+                  image={friend.image}
+                  isClicked={false}
+                  clickHandler={this.clickHandler}
+                />
+              );
+            })}
+          </div>
         </div>
         <Footer />
       </Wrapper>
