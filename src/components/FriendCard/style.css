@@ -1,3 +1,7 @@
+.container{
+  max-width: 960px;
+  max-height: 320px;
+}
 .card {
   background: #fff;
   border: 5px solid white;
